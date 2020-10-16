@@ -11,13 +11,13 @@ This repository contains the source code used to run experiments for the paper `
 
 This repository is licensed under the MIT License.
 
-* MIT license ([LICENSE](../LICENSE) or http://opensource.org/licenses/MIT)
+* MIT license ([LICENSE](LICENSE) or http://opensource.org/licenses/MIT)
 
 
 ## Overview
 
 3 python files contain the code for the attacks. A simplified CLI allows for specifying any relevant parameter for the experiment that is to be conducted (noise, public points, number of shares, amount of traces/experiment, output, seed). Some example of the CLI are given as comments on top of each file. They all require the packages [numpy](https://numpy.org/) and [scipy](https://www.scipy.org/) to run. All the python script are monothreaded, since every attack is independant the simplest way to run large experiments is to start several of them with the same parameters and combine the resulting output.
-In the [data](../data) folder are the experiments used in the paper to make all our plots.
+In the [data](data) folder are the experiments used in the paper to make all our plots.
 
 ## Experimental protocol
 
@@ -25,7 +25,7 @@ We call an experiment the combination of several independent attacks which use t
 
 ## Data format and reproducing experiments
 
-Every file in [data](../data) is labelled with the format d_n_with_a_b_..._e.csv except for the attacks on first and second order Boolean Masking. Where `d` is the degree of the masking, `n` is the amount of shares and `a,b,...,e` are the public points chosen for the Polynomial masking. Inside each file, you will find experiments for a given value of sigma2. One experiment always starts with those three rows:
+Every file in [data](data) is labelled with the format d_n_with_a_b_..._e.csv except for the attacks on first and second order Boolean Masking. Where `d` is the degree of the masking, `n` is the amount of shares and `a,b,...,e` are the public points chosen for the Polynomial masking. Inside each file, you will find experiments for a given value of sigma2. One experiment always starts with those three rows:
 ```
 sigma_2;X
 number of traces;Y
